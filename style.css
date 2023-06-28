@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../EDSAMiniProject/Assets/Pics/Animated\ Shape.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation .navLoginBtn {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .navLoginBtn:hover {
+    background: white;
+    color: black;
+}
+
+.container {
+    width: 440px;
+    height: 400px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px black;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+#inputText {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    resize: none;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+#submitBtn {
+    width: 30%;
+    margin-top: 5px;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    border: white;
+    background-color: none;
+    color: black;
+    cursor: pointer;
+    align-self: center;
+}
+
+#submitBtn:hover {
+    background-color: white;
+    color: black;
+    transform: 0.9;
+}
+
+.result {
+    width: 440px;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 60px;
+    color: white;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* adjust header and navigation styles */
+    header {
+      padding: 10px;
+    }
+    .navigation a {
+      font-size: 0.9em;
+      margin-left: 20px;
+    }
+    .navigation .navLoginBtn {
+      width: 100px;
+      font-size: 0.9em;
+      margin-left: 20px;
+    }
+    /* adjust container and inputText styles */
+    .container {
+      width: 80%;
+      height: auto;
+      margin: 50px auto;
+      padding: 10px;
+    }
+    #inputText {
+      height: 150px;
+      font-size: 16px;
+    }
+    /* adjust result styles */
+    .result {
+      width: 80%;
+      font-size: 16px;
+      margin-top: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 320px) {
+    body {
+    background-size: contain;
+    background-position: top;
+    }
+    
+    .container {
+    width: 90%;
+    height: auto;
+    margin-top: 70px;
+    }
+    
+    label {
+    font-size: 20px;
+    }
+    
+    #inputText {
+    height: 150px;
+    }
+    
+    button {
+    width: 70%;
+    font-size: 16px;
+    }
+    
+    .result {
+    width: 90%;
+    margin-top: 40px;
+    }
+    }
+    
+    @media only screen and (min-width: 321px) and (max-width: 767px) {
+    .container {
+    width: 70%;
+    }
+    
+    label {
+    font-size: 22px;
+    }
+    
+    #inputText {
+    height: 180px;
+    }
+    
+    button {
+    width: 60%;
+    font-size: 16px;
+    }
+    }
+    
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+    width: 60%;
+    }
+    
+    label {
+    font-size: 24px;
+    }
+    
+    #inputText {
+    height: 200px;
+    }
+    
+    button {
+    width: 50%;
+    font-size: 18px;
+    }
+    }
+    
+    @media only screen and (min-width: 1024px) {
+    body {
+    background-size: cover;
+    background-position: center;
+    }
+    
+    .container {
+    width: 440px;
+    height: 400px;
+    margin-top: 0;
+    }
+    
+    label {
+    font-size: 24px;
+    }
+    
+    #inputText {
+    height: 200px;
+    }
+    
+    button {
+    width: 50%;
+    font-size: 18px;
+    }
+    
+    .result {
+    width: 440px;
+    margin-top: 60px;
+    }
+    }
